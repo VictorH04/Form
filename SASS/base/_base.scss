@@ -1,0 +1,95 @@
+/* ===== Universal Things ===== */
+
+:root {
+    //* COLORS
+    --primary-yellow: #ffd300;
+    --primary-darkYellow: #e4aa0b;
+    --primary-blue: #2c3e50;
+    --primary-green: #009432;
+    --primary-red: #EA2027;
+
+    //* SHADOWS
+    --shadow-light-1: 0 3.5rem 4rem rgba(0, 0, 0, .4);
+    --shadow-dark-1: 0 2rem 6rem rgba(0, 0, 0, .4);
+    --shadow-dark-2: 0 2rem 4rem rgba(0, 0, 0, .6);
+    --shadow-dark-3: 0 2rem 4rem rgba(0, 0, 0, .8);
+    --shadow-dark-4: 0 1rem 2rem rgba(0, 0, 0, .6);
+
+    //* BORDERS
+    --border-bottom-1: .2rem solid #000;
+    --border-bottom-2: .2rem solid #ffd300;
+    --border-bottom-3: .5rem solid #ffd300;
+    --border-bottom-4: .1rem solid #ffd300;
+    --border-bottom-5: .2rem solid #ffd300;
+    --border-bottom-6: .2rem solid #40437c;
+
+    //* MARGINS
+
+
+    //* PADDINGS
+
+
+    //* FONT-SIZES
+    --fs-heading-big: 4rem;
+    --fs-heading: 3rem;
+    --fs-title: 2.5rem;
+    --fs-text-big: 2rem;
+    --fs-text: 1.5rem;
+}
+
+/* MEDIA QUERY SIZES */
+$bp-largest: 75em; // 1200px === 75em
+$bp-large: 68.75em; // 1100px === 68.75em
+$bp-medium: 56.25em; // 900px === 56.25em
+$bp-small: 37.5em; // 600px === 37.5em
+$bp-smallest: 31.25em; // 500px === 31.25em
+$bp-phone: 23.75em; // 380px === 23.75em
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // ! This defines what 1rem is.
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Saira', sans-serif;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+
+    // MEDIA QUERY
+    @media screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
+
+    @media screen and (max-width: $bp-small) {
+        font-size: 25%;
+    }
+}
+
+body {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 100vh;
+    // min-height: 100vh;
+    // min-width: 100vw;
+    // display: grid;
+    // place-items: center;
+    overflow-x: hidden;
+    // overflow-y: scroll;
+    scroll-behavior: smooth;
+
+    font-family: Saira;
+    background-color: var(--primary-blue);
+    background: #11998e;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #38ef7d, #11998e);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #38ef7d, #11998e);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
