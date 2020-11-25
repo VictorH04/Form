@@ -19,6 +19,14 @@
             <h1 class="form-container_title">Registration</h1>
             <p class="form-container_undertitle">Fill the forms to create an account</p>
 
+            <label for="name" class="form-container_fname">First Name</label>
+            <input type="text" placeholder="First name:" name="fname" class="form-container_fname--input"
+                id="fname" required>
+
+            <label for="name" class="form-container_lname">Last Name</label>
+            <input type="text" placeholder="Last name:" name="lname" class="form-container_lname--input"
+                id="lname" required>
+
             <label for="username" class="form-container_username">Username</label>
             <input type="text" placeholder="Username:" name="username" class="form-container_username--input"
                 id="username" required>
@@ -27,9 +35,13 @@
             <input type="email" placeholder="Email:" name="email" class="form-container_email--input" id="email"
                 required>
 
-            <label for="username" class="form-container_password">Password</label>
+            <label for="password" class="form-container_password">Password</label>
             <input type="password" placeholder="Password:" name="password" class="form-container_password--input"
                 id="password" required>
+
+            <label for="password" class="form-container_repeatpassword">Repeat Password</label>
+            <input type="password" placeholder="Repeat Password:" name="password" class="form-container_repeatpassword--input"
+                id="repeat-password" required>
 
 
             <button type="submit" class="form-container_btn" id="btn">Create account</button>
