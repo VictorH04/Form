@@ -10,7 +10,7 @@
     &-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(6, 1fr);
+        grid-template-rows: repeat(5, 1fr);
         background-color: #fff;
         box-shadow: var(--shadow-dark-3);
         padding: 5rem 25rem;
@@ -57,35 +57,6 @@
                 padding-right: 0;
                 outline: none;
                 grid-column: 1 / 1;
-                grid-row: 3 / 3;
-
-                align-self: end;
-                justify-self: start;
-
-                font-family: 'Saira';
-                font-size: var(--fs-text);
-                transition: all .2s;
-            }
-
-            &--input:focus {
-                padding-right: 3rem;
-            }
-        }
-
-        &_lname {
-            align-self: start;
-            padding-bottom: 1rem;
-            font-size: var(--fs-text-big);
-
-            grid-column: 2 / 2;
-            grid-row: 3 / 3;
-
-            &--input {
-                margin-top: 5rem;
-                padding: .5rem;
-                padding-right: 0;
-                outline: none;
-                grid-column: 2 / 2;
                 grid-row: 3 / 3;
 
                 align-self: end;
@@ -160,63 +131,6 @@
             }
         }
 
-        &_password {
-            align-self: start;
-            padding-bottom: 1rem;
-            font-size: var(--fs-text-big);
-
-            grid-column: 1 / 1;
-            grid-row: 5 / 5;
-
-            &--input {
-                margin-top: 5rem;
-                padding: .5rem;
-                padding-right: 0;
-                outline: none;
-                grid-column: 1 / 1;
-                grid-row: 5 / 5;
-
-                align-self: end;
-                justify-self: start;
-
-                font-family: 'Saira';
-                font-size: var(--fs-text);
-                transition: all .2s;
-            }
-
-            &--input:focus {
-                padding-right: 3rem;
-            }
-        }
-
-        &_repeatpassword {
-            align-self: start;
-            padding-bottom: 1rem;
-            font-size: var(--fs-text-big);
-
-            grid-column: 2 / 2;
-            grid-row: 5 / 5;
-
-            &--input {
-                margin-top: 5rem;
-                padding: .5rem;
-                padding-right: 0;
-                outline: none;
-                grid-column: 2 / 2;
-                grid-row: 5 / 5;
-
-                align-self: end;
-                justify-self: start;
-
-                font-family: 'Saira';
-                font-size: var(--fs-text);
-                transition: all .2s;
-            }
-
-            &--input:focus {
-                padding-right: 3rem;
-            }
-        }
 
         &_btn {
             // height: 6rem;
@@ -228,7 +142,7 @@
             align-self: center;
             
             grid-column: 1 / span 2;
-            grid-row: 6 / 6;
+            grid-row: 5 / 5;
             
             outline: 0;
             border-radius: .3rem;
@@ -248,4 +162,17 @@
             box-shadow: var(--shadow-dark-2);
         }
     }
+}
+
+.resultstext {
+    display: flex;
+    justify-content: center;
+
+    height: 109%;
+    width: 100%;
+
+    padding: 2rem 2rem;
+
+    font-size: 3rem;
+    background-color: #fff;
 }

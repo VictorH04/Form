@@ -2,14 +2,14 @@
 	"name": "form",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
+	"main": "bin/form.js",
 	"scripts": {
-		"watch:sass": "node-sass sass/main.scss css/style.css -w",
-		"start": "npm-run-all --parallel watch:sass",
-		"compile:sass": "node-sass sass/main.scss css/style.comp.css",
-		"prefix:css": "postcss --use autoprefixer -b 'last ten versions' css/style.comp.css -o css/style.prefix.css",
-		"compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-		"build:css": "npm-run-all compile:sass prefix:css compress:css"
+	"watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "start": "nodemon ./bin/www.js",
+    "compile:sass": "node-sass /starter/SASS/main.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last ten versions' css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
 	},
 	"repository": {
 		"type": "git",
@@ -27,5 +27,11 @@
 	"bugs": {
 		"url": "https://github.com/VictorH04/Form/issues"
 	},
-	"homepage": "https://github.com/VictorH04/Form#readme"
+	"homepage": "https://github.com/VictorH04/Form#readme",
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"express": "^4.17.1",
+		"mongodb": "^3.6.3",
+		"nodemon": "^2.0.7"
+	}
 }

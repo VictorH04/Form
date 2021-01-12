@@ -6,51 +6,40 @@
     <title>Form | Registration</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Saira:300,400,500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <form action="" class="form">
+    <form action="POST" action="/view-result" class="form">
 
         <div class="form-container">
 
             <h1 class="form-container_title">Registration</h1>
             <p class="form-container_undertitle">Fill the forms to create an account</p>
 
-            <label for="name" class="form-container_fname">First Name</label>
-            <input type="text" placeholder="First name:" name="fname" class="form-container_fname--input"
-                id="fname" required>
-
-            <label for="name" class="form-container_lname">Last Name</label>
-            <input type="text" placeholder="Last name:" name="lname" class="form-container_lname--input"
-                id="lname" required>
+            <label for="name" class="form-container_fname">Full Name</label>
+            <input type="text" placeholder="Full name:" name="fname" class="form-container_fname--input"
+                id="fullname" >
 
             <label for="username" class="form-container_username">Username</label>
             <input type="text" placeholder="Username:" name="username" class="form-container_username--input"
-                id="username" required>
+                id="username" >
 
             <label for="Email" class="form-container_email">Email</label>
-            <input type="email" placeholder="Email:" name="email" class="form-container_email--input" id="email"
-                required>
-
-            <label for="password" class="form-container_password">Password</label>
-            <input type="password" placeholder="Password:" name="password" class="form-container_password--input"
-                id="password" required>
-
-            <label for="password" class="form-container_repeatpassword">Repeat Password</label>
-            <input type="password" placeholder="Repeat Password:" name="password" class="form-container_repeatpassword--input"
-                id="repeat-password" required>
+            <input type="email" placeholder="Email:" name="email" class="form-container_email--input" id="email">
 
 
-            <button type="submit" class="form-container_btn" id="btn">Create account</button>
+            <button type="submit" value="Submit" class="form-container_btn" id="btn">Create account</button>
         </div>
 
     </form>
 
+    <a class="resultstext" href="/view-results">View Result</a>
 
-    <script src="JS/app.js"></script>
+
+    <script src="app.js"></script>
 </body>
 
 </html>

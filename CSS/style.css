@@ -56,6 +56,7 @@ body {
   background: -webkit-linear-gradient(to bottom, #38ef7d, #11998e);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #38ef7d, #11998e);
+  background-repeat: no-repeat;
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 .form {
@@ -67,7 +68,7 @@ body {
   .form-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     background-color: #fff;
     box-shadow: var(--shadow-dark-3);
     padding: 5rem 25rem;
@@ -101,26 +102,6 @@ body {
         font-size: var(--fs-text);
         transition: all .2s; }
       .form-container_fname--input:focus {
-        padding-right: 3rem; }
-    .form-container_lname {
-      align-self: start;
-      padding-bottom: 1rem;
-      font-size: var(--fs-text-big);
-      grid-column: 2 / 2;
-      grid-row: 3 / 3; }
-      .form-container_lname--input {
-        margin-top: 5rem;
-        padding: .5rem;
-        padding-right: 0;
-        outline: none;
-        grid-column: 2 / 2;
-        grid-row: 3 / 3;
-        align-self: end;
-        justify-self: start;
-        font-family: 'Saira';
-        font-size: var(--fs-text);
-        transition: all .2s; }
-      .form-container_lname--input:focus {
         padding-right: 3rem; }
     .form-container_username {
       align-self: start;
@@ -162,53 +143,13 @@ body {
         transition: all .2s; }
       .form-container_email--input:focus {
         padding-right: 3rem; }
-    .form-container_password {
-      align-self: start;
-      padding-bottom: 1rem;
-      font-size: var(--fs-text-big);
-      grid-column: 1 / 1;
-      grid-row: 5 / 5; }
-      .form-container_password--input {
-        margin-top: 5rem;
-        padding: .5rem;
-        padding-right: 0;
-        outline: none;
-        grid-column: 1 / 1;
-        grid-row: 5 / 5;
-        align-self: end;
-        justify-self: start;
-        font-family: 'Saira';
-        font-size: var(--fs-text);
-        transition: all .2s; }
-      .form-container_password--input:focus {
-        padding-right: 3rem; }
-    .form-container_repeatpassword {
-      align-self: start;
-      padding-bottom: 1rem;
-      font-size: var(--fs-text-big);
-      grid-column: 2 / 2;
-      grid-row: 5 / 5; }
-      .form-container_repeatpassword--input {
-        margin-top: 5rem;
-        padding: .5rem;
-        padding-right: 0;
-        outline: none;
-        grid-column: 2 / 2;
-        grid-row: 5 / 5;
-        align-self: end;
-        justify-self: start;
-        font-family: 'Saira';
-        font-size: var(--fs-text);
-        transition: all .2s; }
-      .form-container_repeatpassword--input:focus {
-        padding-right: 3rem; }
     .form-container_btn {
       box-shadow: var(--shadow-dark-4);
       cursor: pointer;
       height: 70%;
       align-self: center;
       grid-column: 1 / span 2;
-      grid-row: 6 / 6;
+      grid-row: 5 / 5;
       outline: 0;
       border-radius: .3rem;
       border: none;
@@ -220,3 +161,12 @@ body {
     .form-container_btn:hover {
       transform: translateY(-1rem);
       box-shadow: var(--shadow-dark-2); }
+
+.resultstext {
+  display: flex;
+  justify-content: center;
+  height: 109%;
+  width: 100%;
+  padding: 2rem 2rem;
+  font-size: 3rem;
+  background-color: #fff; }
