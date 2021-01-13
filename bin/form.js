@@ -41,7 +41,7 @@ const url = require('url');
 const bodyParser = require('body-parser');
 const mongodb = require('mongodb');
 
-let dbConn = mongodb.MongoClient.connect('mongodb://localhost:27017');
+let dbConn = mongodb.MongoClient.connect('mongodb+srv://dbVictor:VictorDB@victortestdb.csamz.mongodb.net/dbVictor?retryWrites=true&w=majority/formData/Data',{ useNewUrlParser: true , useUnifiedTopology : true});
 
 let app = express();
 
@@ -55,6 +55,23 @@ let port = 3000;
 
 app.get('/', (req, res) => {
 	res.sendFile(path.resolve('index.html'));
+});
+
+app.post('/view-result', (req, res) => {
+    dbConn.then(function(db) {
+        delete req.body._id;
+        db.collection('formData').insertOne(req.body);
+    });
+    res.send('Data recieved: \n' + JSON.stringify(req.body));
+});
+
+app.get('/view-results', (req, res) => {
+    dbConn.then(function(db) {
+        db.collection('formData').find({}).toArray().then(function(feedbacks) {
+            res.status(200).json(feedbacks);
+        });
+    });
+
 });
 
 app.listen(port, 'localhost');
